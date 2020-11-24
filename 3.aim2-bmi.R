@@ -178,7 +178,7 @@ for (i in var_list) {
   
   # Add these coefficients, CIs, n and p-values to the table
   outcome <- i[[1]]
-  varName <- "bmi_z (ref = men)"
+  varName <- "BMI (z-score)"
   coef <- names(model$coefficients)
   temp <- data.frame(outcome, varName, coef, nobs(model),
                      round(exp(model$coefficients), 2), 
@@ -271,7 +271,7 @@ for (i in var_list) {
   
   # Add these coefficients, CIs, n and p-values to the table
   outcome <- i[[1]]
-  varName <- "bmi_z (ref = men)"
+  varName <- "BMI (z-score)"
   coef <- names(model$coefficients)
   temp <- data.frame(outcome, varName, coef, nobs(model),
                      round(exp(model$coefficients), 2), 
