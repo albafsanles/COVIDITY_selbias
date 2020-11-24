@@ -41,21 +41,21 @@ library("forestplot")
 # 5. Check/prepare the variables
 #########################################################################################################
 
+
 #########################################################################################################
 #Code predictor variables as factors and assign interpretable names
   
 db <- db %>%  
-  mutate(categorical_predictor1 = as.factor(categorical_predictor1)) %>%
-  mutate(categorical_predictor2 = as.factor(categorical_predictor2)) %>%
+  mutate(sex = as.factor(sex)) %>%
+  mutate(smoking = as.factor(smoking)) %>%
+  mutate(education = as.factor(education)) %>%
+  mutate(IMD = as.factor(IMD)) %>%
   mutate(outcome1 = as.factor(outcome1)) %>%
   mutate(outcome2 = as.factor(outcome2)) 
 
 db <- db %>%  
-  mutate(continuous_predictor1 = as.numeric(continuous_predictor1)) %>%
-  mutate(continuous_predictor2 = as.numeric(continuous_predictor2))
-
-db <- db %>%  
-  mutate(identifier = as.character(identifier)) 
+  mutate(age_z = as.numeric(age_z)) %>%
+  mutate(bmi_z = as.numeric(bmi_z))
 
 
 #########################################################################################################
